@@ -13,7 +13,7 @@ window.onload = function() {
                         alt="${data[key]}"
                     />
 
-                    <h2> ${key} ${data[key]}</h2>
+                    <h2>${data[key]}</h2>
                 `;
                 countries.append(li);
             }
