@@ -20,5 +20,3 @@ window.onload = function() {
         });
     });
 };
-
-
