@@ -1,3 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 body {
+  font-family: 'Open Sans', sans-serif;
   background-color: #212121;
+}
+
+.countries {
+  width: 600px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.countries li {
+  width: 100%;
+  background-color: rgba(255,255,255,0.1);
+  margin: 5px;
+  height: 60px;
+}
+
+.countries li img {
+  height: 60px;
+}
+
+.countries li h2 {
+  display: inline-block;
+  margin: 0;
+  float: right;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 10px;
+
+  transition: all 0.2s ease-in-out;
+}
+.countries li:hover {
+  cursor: pointer;
+}
+
+.countries li:hover h2 {
+  border-bottom: 5px solid orange;
 }
