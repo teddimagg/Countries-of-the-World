@@ -1,8 +1,7 @@
 // PURE JS FIREBASE API CALL
-const url = 'https://randomuser.me/api/';
+const url = 'https://staticbasetest.firebaseio.com/.json';
 fetch(url).then((response) => {
     response.json().then((data) => {
-        const results = data.results[0];
-        console.table(results);
+        console.log(data);
     });
 });
