@@ -153,3 +153,12 @@ input::-webkit-input-placeholder {
   font-family: 'Open Sans', sans-serif;
   color: rgba(255,255,255,0.4);
 }
+
+/* ARROW HIGHLIGHTS */
+.highlight {
+  
+}
+
+.highlight img {
+  filter: grayscale(0) !important;
+}

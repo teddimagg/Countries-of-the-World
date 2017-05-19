@@ -1,6 +1,7 @@
 // PURE JS FIREBASE API CALL
 let dataset;
 let searchstring = "";
+let highlight = 0;
 
 window.onload = function() {
     get();
@@ -9,12 +10,26 @@ window.onload = function() {
     const search = document.querySelector('#search');
     search.addEventListener('input', () => {
         searchstring = search.value;
+        highlight = 0;
         render();
     });
+    
+    //ARROW FUNCTIONALITY
+    search.onkeydown = (e) => {
+        if(e.keyCode == 38){ //UP
+            highlight > 0 && highlight--;
+        } else if(e.keyCode == 40){ //DOWN
+            highlight < dataset.length && highlight++;
+        }
+        
+        (highlight && renderHighlight());
+
+    };
 
     //COUNTRY DETAILS LISTENER
     const countries = document.querySelector(".countries");
     countries.addEventListener("click", (e) => expandCountry(e.target), false);
+
 };
 
 // Fetches data from firebase server via ES6 fetch()
@@ -48,6 +63,24 @@ function render(){
             countries.append(li);
         }
     }
+}
+
+function renderHighlight(){
+    let country = document.querySelectorAll('.countries > li')[highlight - 1];
+    //TODO: REFACTOR
+
+    //remove all other highlights and close expansion
+    document.querySelectorAll('.highlight').forEach((h) => {
+        h.classList.remove('highlight');
+        expandCountry(h);
+    });
+        
+    //Highlight selected country
+    country.classList.add('highlight');
+    expandCountry(country);
+
+    //TODO: Scroll to selected country
+    
 }
 
 //Expand details on certain country
@@ -90,4 +123,17 @@ function numberFormat(_number, _sep){
         _number = _number.replace(/\s/g, _sep);
     }
     return _number;
+}
+
+function getPosition(element) {
+    var xPosition = 0;
+    var yPosition = 0;
+
+    while(element) {
+        xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+        element = element.offsetParent;
+    }
+
+    return { x: xPosition, y: yPosition };
 }
