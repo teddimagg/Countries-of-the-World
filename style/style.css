@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:900|Open+Sans:400,800|Pacifico');
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #212121;
+
+  padding: 0;
+  margin: 0;
+}
+
+input {
+    font-size: 20px;
+    padding: 10px;
+
+    color: orange;
+    text-shadow: 0px 0px 0px #000;
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-text-fill-color: transparent;
+}
+
+input::-webkit-input-placeholder {
+    color: #ccc;
+    text-shadow: none;
+    -webkit-text-fill-color: initial;
+}
+
+/* LOGO */
+.logo {
+  margin: 45px 0;
+  position: relative;
+}
+
+.logo h1 {
+  font-family: 'Lato', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 54px;
+  padding: 10px;
+  margin: 0;
+}
+
+.logo h2 {
+  font-family: 'Pacifico', cursive;
+  color: orange;
+  font-size: 35px;
+  text-align: center;
+  padding: 0;
+  margin: -30px 0 -20px 0;
+}
+
+/* USER PANEL */
+.userpanel {
+  position: relative;
+}
+
+.userpanel img {
+  width: 25px;
+  position: absolute;
+  top: 7.5px;
+  right: 15px;
+}
+
+.userpanel input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.userpanel input:focus {
+  outline: none;
+}
+
+/* COUNTRY CONTAINERS */
+
+.countries, .logo, .userpanel {
+  width: 600px;
+  max-width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  list-style: none;
+  padding: 0;
+}
+
+.countries li {
+  width: 100%;
+  background-color: rgba(255,255,255,0.1);
+  margin: 5px 0;
+  height: 60px;
+
+  transition: all 0.13s ease-in-out;
+  overflow: hidden;
+}
+
+.countries li img {
+  height: 60px;
+  filter: grayscale(1);
+}
+
+.countries li h2 {
+  display: inline-block;
+  float: right;
+
+  margin: 10px 10px 0 0;
+  color: white;
+
+  font-weight: 700;
+  font-size: 18px;
+
+  transition: all 0.2s cubic-bezier(.32,.47,.54,1.59);
+  max-width: calc(100% - 110px);
+  text-align: right;
+}
+
+.countries li:hover img {
+  filter: grayscale(0);
+}
+
+.countries li:hover {
+  cursor: pointer;
+}
+
+.countries li:hover h2 {
+  border-bottom: 5px solid orange;
+}
+
+/* DETAILS */
+.details {
+  width: 100%;
+
+  display: flex;
+}
+
+.details p {
+  font-family: 'Pacifico', cursive;
+  color: white;
+  padding-left: 20px;
+  width: 33%;
+}
+
+.details p b {
+  width: 100%;
+  display: block;
+  font-size: 28px;
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ARROW HIGHLIGHTS */
+.highlight {
+  
+}
+
+.highlight img {
+  filter: grayscale(0) !important;
+}
+
+/**************************/
+/*         MOBILE         */
+/**************************/
+@media (max-width: 600px) {
+  /* DETAILS */
+  .details p {
+    padding-left: 20px;
+    width: auto;
+    min-width: calc(33% - 20px);
+  }
+
+  .details p b {
+    font-size: 18px;
+  }
+  /* USER PANEL*/
+  .userpanel input {
+    border-radius: 0;
+    padding: 30px;
+  }
+
+  .userpanel img {
+    top: 17px;
+  }
+}
