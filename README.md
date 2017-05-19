@@ -1,8 +1,12 @@
-# StaticBase
-A static implementation of an http get call to a firebase database.
-Using ES6's fetch function.
+# Countries of the World
+A pet project to excercise the absence of jQuery with help of ES6 and firebase.
+The implementation is not built on any buildpacks or unconventional frameworks.
 
-Database URL:
+The web application fetches all countries of the world and their details from a 
+Firebase database, displays them in a mobile-first designed UI with some slick 
+jQuery-less UX scripts, more to come.
+
+Firebase URL:
 ```
 https://staticbasetest.firebaseio.com/.json
 ```
