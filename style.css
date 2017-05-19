@@ -37,8 +37,31 @@ body {
   margin: -30px 0 -20px 0;
 }
 
+/* USER PANEL */
+.userpanel {
+  position: relative;
+}
 
-.countries, .logo {
+.userpanel img {
+  width: 25px;
+  position: absolute;
+  top: 7.5px;
+  right: 15px;
+}
+
+.userpanel input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.userpanel input:focus {
+  outline: none;
+}
+
+.countries, .logo, .userpanel {
   width: 600px;
   max-width: 100vw;
   margin-left: auto;
