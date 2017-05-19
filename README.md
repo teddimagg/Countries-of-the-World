@@ -21,5 +21,5 @@ http://data.enter.is/p/countries/
 ![alt tag](https://i.gyazo.com/a3a2a461bcf06e510b900d3ce3d37938.png)
 
 ## Built With
-* [Firebase]() - Database
 * [ES6](https://maven.apache.org/) - ECMASCRIPT 2016 for fetch function
+* [Firebase](https://firebase.google.com/) - Database
