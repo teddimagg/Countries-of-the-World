@@ -100,7 +100,7 @@ function expandCountry(country){
         details.innerHTML =`
             <p>Population: <b>${numberFormat(select.population)}</b></p>
             <p>Continent: <b>${select.continent}</b></p>
-            <p>Population: <b>${select.capital}</b></p>
+            <p>Capital: <b>${select.capital}</b></p>
         `;
         country.append(details);
 
