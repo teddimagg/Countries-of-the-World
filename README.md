@@ -11,6 +11,11 @@ Firebase URL:
 https://countries-9721c.firebaseio.com/.json
 ```
 
+# Live server
+```
+http://data.enter.is/p/countries/
+```
+
 ## Screens
 ![alt tag](https://i.gyazo.com/d8d478c3f08a047aac183a5aa54b73e4.png)
 ![alt tag](https://i.gyazo.com/a3a2a461bcf06e510b900d3ce3d37938.png)
