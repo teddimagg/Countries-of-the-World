@@ -155,8 +155,8 @@ input::-webkit-input-placeholder {
 }
 
 /* ARROW HIGHLIGHTS */
-.highlight {
-  
+.highlight h2 {
+    border-bottom: 5px solid orange;
 }
 
 .highlight img {
@@ -170,6 +170,7 @@ input::-webkit-input-placeholder {
   /* DETAILS */
   .details p {
     padding-left: 20px;
+    margin-top: 25px;
     width: auto;
     min-width: calc(33% - 20px);
   }

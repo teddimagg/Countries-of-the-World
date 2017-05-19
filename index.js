@@ -68,7 +68,6 @@ function render(){
 
 function renderHighlight(){
     let country = document.querySelectorAll('.countries > li')[highlight - 1];
-    //TODO: REFACTOR
 
     //Remove all current highlights and close expansion
     document.querySelectorAll('.highlight').forEach((h) => {
@@ -83,7 +82,8 @@ function renderHighlight(){
     }
 
     //TODO: Scroll to selected country
-    
+    // keep selected country in center
+    country && smoothScroll(getPageTopLeft(country).top);
 }
 
 //Expand details on certain country
@@ -124,6 +124,12 @@ function expandCountry(country){
     }
 }
 
+// HELPERS
+function smoothScroll(y){
+    // TODO: smoothscroll
+    window.scrollTo(0, y - window.innerHeight/2);
+}
+
 // SCRAPED HELPERS - no credit taken
 function numberFormat(_number, _sep){
     _number = typeof _number != "undefined" && _number > 0 ? _number : "";
@@ -132,4 +138,13 @@ function numberFormat(_number, _sep){
         _number = _number.replace(/\s/g, _sep);
     }
     return _number;
+}
+
+function getPageTopLeft(el) {
+    var rect = el.getBoundingClientRect();
+    var docEl = document.documentElement;
+    return {
+        left: rect.left + (window.pageXOffset || docEl.scrollLeft || 0),
+        top: rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+    };
 }
