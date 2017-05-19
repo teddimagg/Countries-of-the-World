@@ -16,14 +16,13 @@ window.onload = function() {
     
     //ARROW FUNCTIONALITY
     search.onkeydown = (e) => {
-        if(e.keyCode == 38){ //UP
-            highlight > 0 && highlight--;
-        } else if(e.keyCode == 40){ //DOWN
-            highlight < dataset.length && highlight++;
-        }
+        const countries = document.querySelectorAll('.countries li');
+        //Country selection with arrow keys
+        ((e.keyCode == 38) && (highlight > 0 && highlight-- && e.preventDefault()));
+        ((e.keyCode == 40) && (highlight < countries.length && highlight++ && e.preventDefault()));
         
-        (highlight && renderHighlight());
-
+        //Rerendering if highlight is any
+        renderHighlight();
     };
 
     //COUNTRY DETAILS LISTENER
@@ -34,7 +33,7 @@ window.onload = function() {
 
 // Fetches data from firebase server via ES6 fetch()
 function get(){
-    const url = 'https://staticbasetest.firebaseio.com/.json';
+    const url = 'https://countries-9721c.firebaseio.com/.json';
     fetch(url).then((response) => {
         response.json().then((data) => {
             dataset = data.countries.country;
@@ -76,8 +75,10 @@ function renderHighlight(){
     });
         
     //Highlight selected country
-    country.classList.add('highlight');
-    expandCountry(country);
+    if(country){
+        country.classList.add('highlight');
+        expandCountry(country);
+    }
 
     //TODO: Scroll to selected country
     
@@ -98,7 +99,7 @@ function expandCountry(country){
         details.classList.add('details');
 
         details.innerHTML =`
-            <p>Population: <b>${numberFormat(select.population)}</b></p>
+            <p>Population: <b>${numberFormat(select.population, '.')}</b></p>
             <p>Continent: <b>${select.continent}</b></p>
             <p>Capital: <b>${select.capital}</b></p>
         `;

@@ -8,7 +8,7 @@ jQuery-less UX scripts, more to come.
 
 Firebase URL:
 ```
-https://staticbasetest.firebaseio.com/.json
+https://countries-9721c.firebaseio.com/.json
 ```
 
 ## Screens
