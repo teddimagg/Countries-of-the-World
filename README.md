@@ -1,12 +1,12 @@
 # Countries of the World
-A pet project to excercise the absence of jQuery with help of ES6 and firebase.
+A pet project to excercise the absence of jQuery with help of ES6.
 The implementation is not built on any buildpacks or unconventional frameworks.
 
 The web application fetches all countries of the world and their details from a 
-Firebase database, displays them in a mobile-first designed UI with some slick 
+Firebase hosted json file, displays them in a mobile-first designed UI with some slick 
 jQuery-less UX scripts, more to come.
 
-Firebase URL:
+JSON URL:
 ```
 https://countries-9721c.firebaseio.com/.json
 ```
