@@ -13,7 +13,7 @@ https://countries-9721c.firebaseio.com/.json
 
 ## Live server
 ```
-http://data.enter.is/p/countries/
+http://sandbox.codelab.is/Countries-of-the-World/
 ```
 
 ## Screens
