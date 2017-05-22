@@ -22,4 +22,3 @@ http://data.enter.is/p/countries/
 
 ## Built With
 * [ES6](https://maven.apache.org/) - ECMAScript 2016
-* [Firebase](https://firebase.google.com/) - Database
