@@ -11,7 +11,7 @@ JSON URL:
 https://countries-9721c.firebaseio.com/.json
 ```
 
-# Live server
+## Live server
 ```
 http://data.enter.is/p/countries/
 ```
