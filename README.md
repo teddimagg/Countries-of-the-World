@@ -13,7 +13,7 @@ https://countries-9721c.firebaseio.com/.json
 
 ## Live server
 ```
-http://sandbox.codelab.is/Countries-of-the-World/
+http://sandbox.codelab.is/countries-of-the-world/
 ```
 
 ## Screens
